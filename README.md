@@ -1,10 +1,10 @@
-# FRCHO® — Clothing Store
+# FRCHO — Clothing Store
 
-Tienda de ropa construida con React + Vite. Incluye una portada editorial, catálogo filtrable, tarjetas de producto, carrito lateral y preparación de pedidos por WhatsApp.
+Tienda de ropa construida con React + Vite.
 
 ## Requisitos
-- Node.js (versión LTS): https://nodejs.org/
-- Git
+- Node.js (versión LTS recomendada)
+- npm
 
 ## Ejecutar localmente
 ```bash
@@ -12,25 +12,21 @@ npm install
 npm run dev
 ```
 
-Abrí la URL local que muestra Vite (normalmente http://localhost:5173).
-
-## Estructura
-- `src/App.jsx`: composición de la página y estado del catálogo/carrito.
-- `src/components/Navbar.jsx`: navegación y acceso al carrito.
-- `src/components/ProductCard.jsx`: tarjeta individual de producto.
-- `src/components/Cart.jsx`: carrito y enlace para preparar pedido por WhatsApp.
-- `src/data.js`: catálogo de ejemplo, precios e imágenes.
-- `src/styles.css`: identidad visual y estilos responsive.
-
-## Personalización antes de vender
-1. Reemplazá productos, precios e imágenes de ejemplo en `src/data.js` por información real y autorizada.
-2. En `src/components/Cart.jsx`, reemplazá `https://wa.me/?text=...` por `https://wa.me/506XXXXXXXX?text=...` usando el número comercial en formato internacional, sin `+` ni espacios.
-3. El carrito actual prepara un pedido por WhatsApp; no procesa pagos, reserva inventario ni calcula automáticamente el envío.
-4. Configurá políticas de entrega, cambios, privacidad y contacto antes de publicar la tienda.
-
-## Publicar cambios en GitHub
+## Compilar para producción
 ```bash
-git add .
-git commit -m "Refresh FRCHO brand and storefront design"
-git push
+npm run build
+npm run preview
 ```
+
+## Imágenes
+- Las fotografías de producto y la imagen editorial de moda utilizan Unsplash.
+- Las fotografías urbanas de San José, Costa Rica, utilizadas en el hero y el manifiesto son de Mario Spencer en Pexels:
+  - https://www.pexels.com/es-es/foto/calle-urbana-colorida-en-san-jose-costa-rica-29083048/
+  - https://www.pexels.com/photo/vibrant-street-corner-in-san-jose-costa-rica-29083066/
+- Las fotografías remotas requieren conexión a Internet. Revisa las condiciones de uso y atribución de cada proveedor antes de publicar comercialmente.
+
+## Personalización
+- `src/data.js`: catálogo de productos y precios.
+- `src/App.jsx`: estructura de la página.
+- `src/components/`: componentes reutilizables.
+- `src/styles.css`: estilos y diseño responsive.

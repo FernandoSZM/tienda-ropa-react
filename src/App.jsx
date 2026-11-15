@@ -29,21 +29,21 @@ export default function App() {
     <Navbar cartCount={cartCount} onCartClick={() => setCartOpen(true)} />
     <main>
       <section className="hero" id="inicio">
-        <img className="hero-image" src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=2200&q=90" alt="Selección de prendas de estilo urbano" />
+        <img className="hero-image" src="https://images.pexels.com/photos/29083066/pexels-photo-29083066.jpeg?cs=srgb&dl=pexels-spencphoto-29083066.jpg&fm=jpg" alt="Esquina urbana con arte callejero en San José, Costa Rica" />
         <div className="hero-shade" />
         <div className="hero-content">
           <span className="eyebrow light">NUEVA TEMPORADA / 2026</span>
-          <h1>Own your<br /><em>everyday.</em></h1>
-          <p>Vestí tu esencia. Elegí sin reglas.<br />Prendas para todos los días, con actitud propia.</p>
+          <h1>Own your<br /><span className="hero-word-wrap"><em>everyday.</em><span className="brush-stroke brush-stroke-hero" aria-hidden="true" /></span></h1>
+          <p>Vestí tu esencia. Elegí sin reglas.<br />Prendas para todos los días, con actitud propia. Hecho desde Costa Rica.</p>
           <a className="light-button" href="#catalogo">EXPLORAR COLECCIÓN <span>↗</span></a>
         </div>
-        <div className="hero-bottom"><span>01 / 04</span><span>DAILY UNIFORM — COSTA RICA</span></div>
+        <div className="hero-bottom"><span>01 / 04</span><span>DAILY UNIFORM — SAN JOSÉ, COSTA RICA</span></div>
       </section>
 
       <section className="brand-note" id="nosotros">
         <span className="eyebrow">NO ES SOLO LO QUE VESTÍS.</span>
         <p>Es cómo <em>lo llevás.</em></p>
-        <span className="brand-note-side">FRCHO® — EST. 2026</span>
+        <span className="brand-note-side">FRCHO® — EST. 2026</span><span className="brush-stroke brush-stroke-note" aria-hidden="true" />
       </section>
 
       <section className="benefits" aria-label="Beneficios de FRCHO">
@@ -52,7 +52,7 @@ export default function App() {
         <div><span className="benefit-icon">♡</span><div><strong>HECHO PARA VOS</strong><p>Elegí las piezas que te representan.</p></div></div>
       </section>
 
-      <section className="catalog" id="catalogo">
+      <section className="catalog" id="catalogo"><span className="brush-stroke brush-stroke-catalog" aria-hidden="true" />
         <div className="section-heading">
           <div><span className="eyebrow">SELECCIÓN FRCHO / 001</span><h2>La colección<span>.</span></h2></div>
           <p>Menos, pero mejor.<br />Descubrí tus nuevos favoritos.</p>
@@ -67,15 +67,15 @@ export default function App() {
       </section>
 
       <section className="manifesto">
-        <div className="manifesto-image"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85" alt="Inspiración de moda urbana" loading="lazy" /></div>
-        <div className="manifesto-copy"><span className="eyebrow light">EL MANIFIESTO FRCHO</span><h2>Tu estilo.<br /><em>Tus reglas.</em></h2><p>Creemos en vestirse para uno mismo. En piezas que se sienten bien, se ven mejor y te acompañan a donde sea que vayás.</p><a href="#catalogo" className="outline-button">ENCONTRÁ TU ESTILO ↗</a></div>
+        <div className="manifesto-image"><img src="https://images.pexels.com/photos/29083048/pexels-photo-29083048.jpeg?cs=srgb&dl=pexels-spencphoto-29083048.jpg&fm=jpg" alt="Callejón con arte urbano en San José, Costa Rica" loading="lazy" /></div>
+        <div className="manifesto-copy"><span className="eyebrow light">EL MANIFIESTO FRCHO</span><h2>Tu estilo.<br /><em>Tus reglas.</em></h2><p>Nacimos con inspiración urbana y espíritu tico. Creemos en vestirse para uno mismo, en piezas que se sienten bien y te acompañan a donde sea que vayás.</p><a href="#catalogo" className="outline-button">ENCONTRÁ TU ESTILO ↗</a></div>
       </section>
 
       <section className="newsletter"><span className="eyebrow light">MANTENTE CERCA</span><h2>Lo nuevo está<br /><em>por llegar.</em></h2><p>Seguí descubriendo prendas, ideas y novedades de FRCHO.</p><a href="#catalogo" className="light-button">DESCUBRIR FRCHO ↗</a></section>
     </main>
     <footer>
       <div className="footer-main"><a className="logo footer-logo" href="#inicio">FRCHO<span>®</span></a><p>Vestí tu esencia. Elegí sin reglas.</p><a href="#inicio" className="back-top">VOLVER ARRIBA ↑</a></div>
-      <div className="footer-bottom"><span>© 2026 FRCHO. COSTA RICA.</span><span>HECHO PARA EL DÍA A DÍA.</span></div>
+      <div className="footer-bottom"><span>© 2026 FRCHO. HECHO EN COSTA RICA.</span><span>HECHO PARA EL DÍA A DÍA.</span></div>
     </footer>
     <Cart open={cartOpen} items={cart} onClose={() => setCartOpen(false)} onRemove={removeFromCart} />
   </>;
