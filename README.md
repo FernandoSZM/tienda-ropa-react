@@ -1,29 +1,36 @@
-# FORMA — tienda de ropa en React
+# FRCHO® — Clothing Store
 
-Proyecto inicial creado con React + Vite. Incluye catálogo, filtros por categoría, carrito lateral y armado de pedido para WhatsApp.
+Tienda de ropa construida con React + Vite. Incluye una portada editorial, catálogo filtrable, tarjetas de producto, carrito lateral y preparación de pedidos por WhatsApp.
 
 ## Requisitos
-- Node.js (versión LTS recomendada): https://nodejs.org/
-- Visual Studio Code
+- Node.js (versión LTS): https://nodejs.org/
+- Git
 
-## Cómo ejecutarlo
-1. Descomprime la carpeta `tienda-ropa-react`.
-2. Abre esa carpeta en VS Code (`File > Open Folder`).
-3. Abre una terminal en VS Code (`Terminal > New Terminal`).
-4. Ejecuta:
+## Ejecutar localmente
+```bash
+npm install
+npm run dev
+```
 
-   ```bash
-   npm install
-   npm run dev
-   ```
+Abrí la URL local que muestra Vite (normalmente http://localhost:5173).
 
-5. Abre en el navegador la dirección que Vite muestra en la terminal (normalmente http://localhost:5173).
+## Estructura
+- `src/App.jsx`: composición de la página y estado del catálogo/carrito.
+- `src/components/Navbar.jsx`: navegación y acceso al carrito.
+- `src/components/ProductCard.jsx`: tarjeta individual de producto.
+- `src/components/Cart.jsx`: carrito y enlace para preparar pedido por WhatsApp.
+- `src/data.js`: catálogo de ejemplo, precios e imágenes.
+- `src/styles.css`: identidad visual y estilos responsive.
 
-## Personalización
-- Productos y precios: `src/data.js`
-- Componentes: `src/components/`
-- Página principal: `src/App.jsx`
-- Estilos: `src/styles.css`
+## Personalización antes de vender
+1. Reemplazá productos, precios e imágenes de ejemplo en `src/data.js` por información real y autorizada.
+2. En `src/components/Cart.jsx`, reemplazá `https://wa.me/?text=...` por `https://wa.me/506XXXXXXXX?text=...` usando el número comercial en formato internacional, sin `+` ni espacios.
+3. El carrito actual prepara un pedido por WhatsApp; no procesa pagos, reserva inventario ni calcula automáticamente el envío.
+4. Configurá políticas de entrega, cambios, privacidad y contacto antes de publicar la tienda.
 
-## Antes de vender
-Reemplaza el nombre FORMA, fotos, productos y precios. En `src/components/Cart.jsx`, cambia el enlace `https://wa.me/?text=...` por tu número de WhatsApp en formato internacional (por ejemplo, 506XXXXXXXX, sin + ni espacios). El checkout actual prepara un pedido por WhatsApp; no procesa pagos ni descuenta inventario.
+## Publicar cambios en GitHub
+```bash
+git add .
+git commit -m "Refresh FRCHO brand and storefront design"
+git push
+```
